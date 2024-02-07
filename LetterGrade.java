@@ -7,7 +7,7 @@ public class LetterGrade {
 
         Scanner scanner = new Scanner(System.in);
 
-        //Receive scanner as string
+        //Receive grade as string converted to character
         char grade = scanner.next().charAt(0);
 
         scanner.close();
