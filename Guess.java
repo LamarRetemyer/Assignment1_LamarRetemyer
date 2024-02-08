@@ -19,25 +19,33 @@ public class Guess{
         //print message asking user to enter a guess
         System.out.print("Please enter a number: ");
         numToGuess = scan.nextInt();
-
+        int counter = 1;//Counter starting at 1 given the user would have already tried to get the answer before 
+        int highCounter = 0;
+        int lowCounter = 0;
         //read in guess
         while(numToGuess != randNum){//keep going as long as the guess is wrong
-        //print message saying guess is wrong
-        System.out.print("Sorry your guess is wrong. Try Again!: ");
-        
-        //If statement to give the user a hint to the polarity of their guess
-        if (numToGuess > randNum){
-            System.out.println("Your guess was too high.");
-        }
-        else{
-            System.out.println("Your guess was too low.");
-        }
+            counter++;//Counter
 
-        //get another guess from the user
-        numToGuess = scan.nextInt();
+            //print message saying guess is wrong            
+            System.out.print("Sorry your guess is wrong. Try Again!.");
+            
+            //If statement to give the user a hint to the polarity of their guess
+            if (numToGuess > randNum){
+                System.out.print("Your guess was too high: ");
+                highCounter++;
+            }
+            else{
+                System.out.print("Your guess was too low: ");
+                lowCounter ++;
+            }
+
+            //get another guess from the user
+            numToGuess = scan.nextInt();
         }
         scan.close();
     //print message saying guess is right
     System.out.println("Congratulations!! Your guess was correct !!");
+    System.out.println("You took " + counter + " tries.");
+    System.out.println( "\nPerformance summary: \nHigh guesses: " + highCounter + "\nLow guesses: " + lowCounter );
     }
 }
