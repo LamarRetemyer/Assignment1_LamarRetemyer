@@ -1,14 +1,24 @@
 import java.util.*;
 public class Factorial {
     public static void main(String[] args) {
+
         //create a scanner object and display message for the user 
-        System.out.print("Enter integer: ");
+        System.out.print("Enter integer: ");        
         Scanner scanner = new Scanner(System.in);
         int number = scanner.nextInt();
+        
+        //While loop that forces user to enter a positive number
+        while(number < 0){
+            System.out.print("A positive number is required. Enter another number: ");
+            number = scanner.nextInt();
+        }
+        //Close the scanner
         scanner.close();
+
         //create variables to store the product and the count
         int product = 1;
         int i = 1;
+
         //if the user enters 0 print 1
         if (number == 0){
             System.out.println("0! = 1");

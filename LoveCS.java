@@ -7,7 +7,10 @@ import java.util.Scanner;
 // ****************************************************************
 public class LoveCS {
     public static void main(String[] args) {
+        //Add a while loop that checks to see if the user input is positive else it should not 
+    
         //Create a scanner to receive user input
+        
         System.out.print("Please enter the number of times you wish to print it: ");
         Scanner scanner = new Scanner(System.in);
         //Store the limit of how many iterations the user wants
