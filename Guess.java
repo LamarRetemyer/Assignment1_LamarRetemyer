@@ -32,10 +32,10 @@ public class Guess{
             //If statement to give the user a hint to the polarity of their guess
             if (numToGuess > randNum){
                 System.out.print("Your guess was too high: ");
-                highCounter++;
+                highCounter++; //counter for keeping track of the number of high guesses
             }
             else{
-                System.out.print("Your guess was too low: ");
+                System.out.print("Your guess was too low: "); //counter for keeping track of the number of low guesses
                 lowCounter ++;
             }
 
@@ -43,7 +43,7 @@ public class Guess{
             numToGuess = scan.nextInt();
         }
         scan.close();
-    //print message saying guess is right
+    //print message saying guess is right and additional information
     System.out.println("Congratulations!! Your guess was correct !!");
     System.out.println("You took " + counter + " tries.");
     System.out.println( "\nPerformance summary: \nHigh guesses: " + highCounter + "\nLow guesses: " + lowCounter );

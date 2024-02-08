@@ -13,6 +13,12 @@ public class ASCII_Table {
         //Receive user input as integer
         int answer = scanner.nextInt();
 
+        //While loop to ensure that the user enters a valid input
+        while (answer > 127 || answer < 0){
+            System.out.print("Please enter a number that is between 0-127: ");
+            answer = scanner.nextInt();
+        }
+
         //Convert user input to char
         char asciiChar = (char) answer;
 
@@ -22,7 +28,7 @@ public class ASCII_Table {
         //Additional scripts to accept the unicode of the charcter....
 
 
-       System.out.print("\nPlease enter a character to display their unicode: ");
+       System.out.print("\nPlease enter a character to display their decimal value: ");
 
        //Receive input as string then convert the first index to a character to be stored
        char symbol = scanner.next().charAt(0); 
@@ -34,7 +40,7 @@ public class ASCII_Table {
        scanner.close();
 
        //Display the results
-       System.out.println("Unicode: " + unicode);
+       System.out.println("Decimal value: " + unicode);
        
 
     
